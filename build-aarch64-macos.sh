@@ -149,7 +149,6 @@ echo "Done"
 
 echo -n "Patching dynamic library - "
 DYLIB_PATH=mediapipe/bazel-bin/mediapipe/c/libmediapipe.dylib
-mv mediapipe/bazel-bin/mediapipe/c/libmediapipe.so "$DYLIB_PATH"
 chmod +w "$DYLIB_PATH"
 install_name_tool -id @rpath/libmediapipe.dylib "$DYLIB_PATH"
 echo "Done"
